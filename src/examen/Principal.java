@@ -23,7 +23,6 @@ public class Principal {
 		// Generamos la posicion del tesoro
 		Tablero.generaPosicionTesoro();
 
-
 		// Ejecutamos hasta que encuentre el tesoro
 		while (!tab.buscaTesoro()) {
 
@@ -64,6 +63,7 @@ public class Principal {
 		// Variable donde se almacena el movimiento del jugador
 		String movimiento;
 
+		// Pedimos y almacenamos el movimiento
 		System.out.println("¿Hacia donde quiere moverse? (ARRIBA, ABAJO, IZQUIERDA, DERECHA)");
 		movimiento = sc.nextLine();
 
