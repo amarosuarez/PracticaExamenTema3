@@ -30,12 +30,15 @@ public class Principal {
 			// Pintamos el tablero
 			tab.pintaTablero();
 
+			// Ejecutamos mientras el movimiento no sea válido
 			do {
-
+				// Obtenemos la cadena del movimiento
 				movimiento = pideMovimiento();
 
+				// Obtenemos el valor de movimiento
 				valorMovimiento = tab.mueveJugador(movimiento);
 
+				// Según el valor devuelto mostramos un mensaje
 				if (valorMovimiento == -1) {
 					System.out.println("Ese movimiento no está dentro de los límites del tablero");
 				} else if (valorMovimiento == -2) {
@@ -46,13 +49,17 @@ public class Principal {
 
 		}
 
+		// Cuando el jugador gana volvemos a pintar el tablero
 		tab.pintaTablero();
-		System.out.println("Has encontrado el tesoro campeón");
+		
+		// Mostramos el mensaje de victoria
+		System.out.println("¡ENHORABUENA! Has encontrado el tesoro =D");
 
 		// Cerramos el Scanner
 		sc.close();
 	}
 
+	// Función que pide el movimiento
 	static String pideMovimiento() {
 		// Variable donde se almacena el movimiento del jugador
 		String movimiento;
